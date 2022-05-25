@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+@layer base {
+    body {
+      @apply font-[Poppins];
+    }
+}
+
+@font-face {
+	src: url('/public/fonts/characterName.ttf');
+	font-family: "name-font";
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(106, 106, 106); 
+    border-radius: 10px;
+
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.508);
+}
+
+
+.myButton {
+	box-shadow:inset 0px 0px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:9px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#444444;
+	font-size:20px;
+	font-weight:bold;
+	padding:5px 4px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #b8b8b8 5%, #e9e9e9 100%);
+	background-color:#8d8d8d;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.border-orange {
+
+	@apply m-[.2rem] hover:cursor-pointer hover:scale-[1.04] transition ease-in-out duration-[250ms];
+	padding:3px;
+	border-radius:5px;
+	background:linear-gradient(rgb(228, 0, 0),rgb(255, 102, 0)) border-box;
+	box-shadow: 0 0 0 1.2px rgb(0, 0, 0);
+	
+}
+
+.border-green-all-characters, .border-green-player1forms, .border-green-player2forms {
+
+	@apply m-[.2rem] hover:cursor-pointer scale-[1.12] hover:scale-[1.15]
+	transition ease-in-out duration-[250ms];
+	padding:3px;
+	border-radius:5px;
+	background:rgb(55, 255, 0) ;
+	box-shadow: 0 0 0 1.2px rgb(0, 0, 0),
+	0px 0px 22px 5px #12FF00;
+	z-index: 20;
+}
+
+
+.forms-bar {
+	@apply w-2/5 overflow-auto absolute top-[52%];
+	padding: 3em 3em 2em;
+}
+
+.character-name {
+	@apply text-white text-6xl p-6 absolute z-10;
+	text-shadow: 0px 0px 20px #000000, 0px 0px 20px #000000, 0px 0px 20px #000000;
+	font-family: "name-font";
+	font-size: 6em;
+	max-width: 54%;
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+  }
+  
+  .App-link {
+	color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .menu{
+	font-size: 20px;
+  }
+  
+  .toggle-switch {
+	position: relative;
+	width: 75px;
+	display: inline-block;
+	text-align: left;
+	/* top: 4px; */
+  }
+  .checkbox {
+	display: none;
+  }
+  
